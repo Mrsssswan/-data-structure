@@ -17,6 +17,7 @@ public class BulleSort1 {
 				}
 			}
 		}
+		System.out.println("BulleSort1:");
 		for (int i : arr) {
 			System.out.println(i);
 		}
