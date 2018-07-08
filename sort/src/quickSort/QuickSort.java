@@ -9,8 +9,9 @@ import Commons.CommonsUtils;
  */
 public class QuickSort {
 	
-	private static int arr[] = {9,1,5,8,3,7,4};
+	
 	public static void main(String[] args) {
+		int arr[] = {9,1,5,8,3,7,4};
 		int start = 0;
 		int end = arr.length-1;
 		//快排开始
