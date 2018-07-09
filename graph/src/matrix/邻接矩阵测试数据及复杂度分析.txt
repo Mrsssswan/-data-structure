@@ -1,0 +1,45 @@
+复杂度分析：
+创建顶点：
+for(int i=0; i<vertexs.length; i++) {
+			vertexs[i] = vertext.charAt(i);
+		}                                            //vertexs.length等同于N 
+创建顶点需要O(N)的时间复杂度
+初始化边：
+for(int i=0; i<edges.length; i++) {
+			for(int j=0; j<edges[i].length; j++) {
+				//邻接矩阵初始化
+				edges[i][j] = 0;
+			}
+		}            //edges.length跟edges[i].length是相等的  也等同于N
+初始化边需要O(N^2)的时间复杂度		
+创建边：
+	for(int k=0; k<graph.getEdgesNums(); k++) {
+				edges[i][j] = w;
+			edges[j][i] = edges[i][j]}         //graph.getEdgesNums()可以看成一个常量e
+			
+			所以总得时间复杂度为O(N)+O(N^2)+e
+			
+测试数据：
+请输入所有顶点:
+ABCD
+5
+
+1
+0
+1
+
+2
+0
+1
+
+2
+1
+1
+
+3
+0
+1
+
+3
+2
+1
