@@ -1,0 +1,23 @@
+邻接表构建失败，创建边的时候不知道怎么赋予邻接表下一个结点的值
+System.out.println("请输入边的序号");
+			int i = read.nextInt();
+			int j = read.nextInt();
+			edge = new AdjacentEdgeNode();
+			edge.setAdjvex(j);
+			//edge.setEdgeNode(graph.getVertexs()[i].getEdgeNode());
+			graph.getVertexs()[i].setEdgeNode(edge);
+			
+			edge = new AdjacentEdgeNode();
+			edge.setAdjvex(i);
+			//edge.setEdgeNode(graph.getVertexs()[j].getEdgeNode());
+			graph.getVertexs()[j].setEdgeNode(edge);
+		
+也可能是输出有问题
+//输出顶点
+		AdjacentVertexNode[] vertexs = graph.getVertexs();
+        for(int i=0; i<graph.getVertexsNum(); i++) {
+        	System.out.print(vertexs[i].getVertex()+"----->");
+        	//输出边
+            	System.out.print(vertexs[i].getEdgeNode().getAdjvex()+"----->");
+            	 System.out.println();
+            }

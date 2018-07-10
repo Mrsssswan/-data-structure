@@ -7,19 +7,21 @@ import java.util.Scanner;
  * @author wan
  *
  */
-public class GraphOperator {
+public class MatrixGraphOperator {
 	
 	public static void main(String[] args) {
 		MatrixGraph graph = new MatrixGraph();
-		//创建并输出一个邻接矩阵
+		//创建一个邻接矩阵
 		createMGraph(graph);
-		int[][] edges = graph.getEdges();
+		//输出顶点
 		char[] vertext = graph.getVertxs();
 		System.out.print("      ");
 		for(int i=0; i<vertext.length; i++) {
 			System.out.print(vertext[i]+"     ");
 		}
 		System.out.println();
+		//输出边
+		int[][] edges = graph.getEdges();
 		for(int i=0; i<edges.length; i++) {
 			System.out.print(vertext[i]+"    ");
 			for(int j=0; j<edges[i].length; j++) {
@@ -33,7 +35,7 @@ public class GraphOperator {
 	 * 创建一个邻接矩阵
 	 * @param graph
 	 */
-	private static void createMGraph(MatrixGraph graph) {
+	public static void createMGraph(MatrixGraph graph) {
 		Scanner read = new Scanner(System.in);
 		System.out.println("请输入所有顶点:");
 		String vertext = read.nextLine();
